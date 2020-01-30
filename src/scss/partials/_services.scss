@@ -1,0 +1,45 @@
+// Services
+
+.services {
+  $bg: #f5f5f5;
+  background: $bg;
+  text-align: center;
+  @include transition;
+  @include flex(flex-start, space-around);
+}
+
+.services-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+@media (min-width: 576px) {
+  .services-item:nth-last-child(2) {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .services-item:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+
+.services-item-img {
+  margin-bottom: 25px;
+}
+
+@media (min-width: 768px) {
+  .services-item-img {
+    margin-bottom: 35px;
+  }
+}
+
+.services-item-title {
+  margin-bottom: 20px;
+  font: 16px/1.15 $font-secondary;
+}
+
+.services-item-text {
+  max-width: 400px;
+  margin: 0 auto;
+}

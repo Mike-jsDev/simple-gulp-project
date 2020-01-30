@@ -1,0 +1,39 @@
+// Vars for mediaqueries
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+// Media queries
+@mixin screen-sm {
+  @media (min-width: #{$sm}) {
+    @content;
+  }
+}
+@mixin screen-md {
+  @media (min-width: #{$md}) {
+    @content;
+  }
+}
+@mixin screen-lg {
+  @media (min-width: #{$lg}) {
+    @content;
+  }
+}
+@mixin screen-xl {
+  @media (min-width: #{$xl}) {
+    @content;
+  }
+}
+
+
+
+@mixin flex($align: center, $justify: space-between) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin transition($time: 0.3s, $function: ease) {
+  transition: opacity $time $function 0.5s;
+}

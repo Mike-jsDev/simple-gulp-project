@@ -1,0 +1,108 @@
+.pricing {
+  .section-title-text {
+    @include screen-md {
+      margin-bottom: 115px;
+    }
+  }
+
+  &__inner {
+    @include screen-md {
+      display: flex;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #eee;
+    text-align: center;
+    flex: 1 0;
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+
+      @include screen-md {
+        margin-bottom: 0;
+      }
+    }
+
+    &_best {
+      border-top: 5px solid #485563;
+
+      @include screen-md {
+        border-top-width: 1px;
+        border-right: 0;
+        border-left: 0;
+      }
+
+      &::before {
+        @include screen-md {
+          content: '';
+          position: absolute;
+          width: calc(100% + 2px);
+          height: 41px;
+          left: -1px;
+          bottom: 100%;
+          background: #fff;
+          border-top: 5px solid #485563;
+          border-left: 1px solid #eee;
+          border-right: 1px solid #eee;
+        }
+      }
+    }
+
+    &-header {
+      padding: 15px 10px;
+      border-bottom: 1px solid #eee;
+
+      @include screen-lg {
+        padding: 25px 20px 30px;
+      }
+
+      &-pack {
+        margin-bottom: 10px;
+        font-weight: bold;
+
+        p {
+          margin: 0;
+        }
+      }
+      &-title {
+        margin: 0;
+        font-size: 30px;
+
+        @include screen-lg {
+          font-size: 45px;
+        }
+
+        span {
+          display: block;
+          font-size: 14px;
+          font-weight: 300;
+        }
+      }
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      flex: 1 0 auto;
+      padding: 20px 7.5%;
+
+      @include screen-lg {
+        padding: 40px 12% 35px;
+      }
+
+      &-text {
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        flex: 1 0 auto;
+        line-height: 2.86;
+      }
+    }
+  }
+}

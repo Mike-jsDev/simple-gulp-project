@@ -1,0 +1,13 @@
+@import "helpers/vars";
+@import "helpers/mixins";
+
+@import "base/base";
+@import "base/fontello";
+@import "base/bootstrap-grid";
+
+@import "partials/header";
+@import "partials/services";
+@import "partials/team";
+@import "partials/works";
+@import "partials/pricing";
+@import "partials/contacts";

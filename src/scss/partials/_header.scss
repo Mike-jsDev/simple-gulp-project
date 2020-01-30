@@ -1,0 +1,138 @@
+// Header
+.header {
+  padding: 30px 0;
+  min-height: 100vh;
+  background: #3f4950 url(../images/bg-header.jpg) center/cover no-repeat;
+  color: #e8e8e8;
+  overflow: hidden;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-wrapper {
+  position: relative;
+}
+
+.menu-opener {
+  display: flex;
+  align-items: center;
+  font-family: $font-secondary;
+  text-transform: uppercase;
+}
+
+.burger {
+  position: relative;
+  display: inline-block;
+  width: 21px;
+  height: 15px;
+  margin-left: 18px;
+
+  span,
+  &::before,
+  &::after {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #e8e8e8;
+  }
+
+  span {
+    top: 6px;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    top: 0;
+  }
+
+  &::after {
+    top: 12px;
+  }
+}
+
+
+.menu-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 15px 0 0;
+  font-weight: 400;
+  text-align: right;
+  text-transform: uppercase;
+  font-family: $font-secondary;
+}
+
+.menu-dropdown a {
+  display: block;
+  padding: 10px 0 10px 15px;
+}
+
+.header-content {
+  padding: 20% 0 10%;
+  text-align: center;
+}
+
+.page-title {
+  margin-bottom: 25px;
+  font: 700 20px/1.15 $font-secondary;
+}
+
+.header-text {
+  max-width: 630px;
+  margin: 0 auto 12%;
+}
+
+.header-text .btn {
+  margin-top: 30px;
+}
+
+@media (min-width: 768px) {
+  .page-title {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page-title {
+    font-size: 36px;
+  }
+  .header-text {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .header-content {
+    padding-top: 28%;
+  }
+}
+
+.scroll-next {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #e8e8e8;
+  border-radius: 50%;
+  background: url(../images/arrow-down.png) center no-repeat;
+}
+
+.scroll-next::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  width: 1px;
+  height: 50vh;
+  background: #e8e8e8;
+}
